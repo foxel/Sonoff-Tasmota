@@ -176,6 +176,7 @@ enum SupportedModules {
   SONOFF_DUAL_R2,
   ARILUX_LC06,
   SONOFF_S31,
+  FOXEL_DUAL_RF,
   MAXMODULE };
 
 /********************************************************************************************/
@@ -234,7 +235,8 @@ const uint8_t kNiceList[MAXMODULE] PROGMEM = {
   KMC_70011,
   AILIGHT,
   WEMOS,
-  WITTY
+  WITTY,
+  FOXEL_DUAL_RF
 };
 
 // Default module settings
@@ -784,6 +786,16 @@ const mytmplt kModules[MAXMODULE] PROGMEM = {
      GPIO_REL1,        // GPIO12 Red Led and Relay (0 = Off, 1 = On)
      GPIO_LED1_INV,    // GPIO13 Green Led (0 = On, 1 = Off)
      0, 0, 0, 0
+  },
+  { "Foxel Dual RF",   // Foxel's Dual RF (ESP8266)
+    0,
+    GPIO_TXD,         // GPIO01 Relay control
+    GPIO_USER,        // Currently connected to ATtiny
+    GPIO_RXD,         // GPIO03 Relay control
+    0,                // GPIO04 No Connection
+    0,
+    0, 0, 0, 0, 0, 0, // Flash connection
+    0, 0, 0, 0, 0, 0
   }
 };
 
