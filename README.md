@@ -63,6 +63,7 @@ The following devices are supported:
 - [Supla device - Espablo-inCan mod. for electrical Installation box](https://forum.supla.org/viewtopic.php?f=33&t=2188)
 - [Luani HVIO board](https://luani.de/projekte/esp8266-hvio/)
 - Wemos D1 mini and NodeMcu
+- [Foxel's Dual RF](https://github.com/foxel/esp-dual-rf-switch)
 
 ### License
 
