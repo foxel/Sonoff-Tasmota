@@ -240,6 +240,9 @@
 #define D_CMND_CFGDUMP "CfgDump"
 #define D_CMND_I2CSCAN "I2CScan"
 #define D_CMND_EXCEPTION "Exception"
+#define D_CMND_RFBUTTONMASK "RfButtonMask"
+#define D_CMND_RFBIND "RfBind"
+#define D_CMND_RFCLEAR "RfClear"
 
 // Commands xdrv_01_light.ino
 #define D_CMND_COLOR "Color"

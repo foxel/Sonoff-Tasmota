@@ -560,6 +560,9 @@ void SettingsDefaultSet2()
 
   // 5.10.1
   SettingsDefaultSet_5_10_1();
+
+  // Foxel Dual
+  SettingsDefaultSet_RF();
 }
 
 /********************************************************************************************/
@@ -689,6 +692,15 @@ void SettingsDefaultSet_5_10_1()
 //#endif  // USE_DISPLAY
   Settings.display_dimmer = 1;
   Settings.display_size = 1;
+}
+
+void SettingsDefaultSet_RF()
+{
+  for (byte i = 0; i < MAX_KEYS; i++) {
+    Settings.rf_button_mask[i] = 0x00;
+  }
+  Settings.rf_button_mask[0] = 0x09; // 1001
+  Settings.rf_button_mask[1] = 0x06; // 0110
 }
 
 /********************************************************************************************/
@@ -854,6 +866,9 @@ void SettingsDelta()
     }
     if (Settings.version < 0x050B0107) {
       Settings.flag.not_power_linked = 0;
+    }
+    if (Settings.version < 0x050D0000) {
+      SettingsDefaultSet_RF();
     }
 
 

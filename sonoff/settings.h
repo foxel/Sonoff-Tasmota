@@ -247,6 +247,7 @@ struct SYSCFG {
   uint16_t      pulse_counter_type;        // 5D0
   uint16_t      pulse_counter_debounce;    // 5D2
   uint8_t       rf_code[17][9];            // 5D4
+  uint8_t       rf_button_mask[MAX_KEYS];  // 66D
 
 } Settings;
 
